@@ -21,7 +21,7 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "垃圾商城",
-                "enablePullDownRefresh": false
+                "enablePullDownRefresh": true
             }
             
         }
@@ -29,7 +29,7 @@
             "path" : "pages/contact/contact",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "联系我们",
                 "enablePullDownRefresh": false
             }
             
@@ -38,7 +38,7 @@
             "path" : "pages/pics/pics",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "社区图片",
                 "enablePullDownRefresh": false
             }
             

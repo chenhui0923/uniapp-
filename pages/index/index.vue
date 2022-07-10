@@ -1,7 +1,7 @@
 <template>
 	<view class="home">
-		<swiper indicator-dots autoplay circular>
-			<swiper-item v-for="item in swipers" :key="item.id">
+		<swiper indicator-dots autoplay circular >
+			<swiper-item v-for="item in swipers" :key="item.id" @click="swiperClik(item.url)">
 				<image :src="item.img"></image>
 			</swiper-item>
 
@@ -97,6 +97,15 @@
 				console.log(this.goods);
 			},
 			navClik(url){
+				uni.navigateTo({
+					url: url,
+					success: res => {},
+					fail: () => {},
+					complete: () => {}
+				});
+			},
+			swiperClik(url){
+				console.log(url);
 				uni.navigateTo({
 					url: url,
 					success: res => {},

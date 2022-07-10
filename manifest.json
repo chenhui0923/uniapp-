@@ -68,5 +68,17 @@
     "uniStatistics" : {
         "enable" : false
     },
-    "vueVersion" : "2"
+    "vueVersion" : "2",
+    "h5" : {
+        "router" : {
+            "mode" : "history"
+        },
+        "sdkConfigs" : {
+            "maps" : {
+                "qqmap" : {
+                    "key" : "L6BBZ-6MTEU-RUMVL-BUVKJ-QJ2X5-ZJFLB"
+                }
+            }
+        }
+    }
 }
