@@ -18,7 +18,7 @@
 			<view class="tit">推荐商品</view>
 			<view class="goods_list">
 				
-				<goods-list :goods="goods"></goods-list>
+				<goods-list :goods="goods" @goodsItemClick="goGoodsDetail"></goods-list>
 			
 			</view>
 		</view>
@@ -108,6 +108,14 @@
 				console.log(url);
 				uni.navigateTo({
 					url: url,
+					success: res => {},
+					fail: () => {},
+					complete: () => {}
+				});
+			},
+			goGoodsDetail(id){
+				uni.navigateTo({
+					url: '/pages/goods-detail/goods-detail?id='+id,
 					success: res => {},
 					fail: () => {},
 					complete: () => {}

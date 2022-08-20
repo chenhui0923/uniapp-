@@ -1,6 +1,6 @@
 <template>
 	<view class="goods_list">
-		<goods-list :goods="goodsmessage"></goods-list>
+		<goods-list :goods="goodsmessage" @goodsItemClick="goGoodsDetail"></goods-list>
 		<view class="isover" v-if="flag">----我是有底线的----</view>
 	</view>
 </template>
@@ -26,6 +26,14 @@
 				this.goodsmessage = [...this.goodsmessage, ...res.data.message]
 				
 				
+			},
+			goGoodsDetail(id){
+				uni.navigateTo({
+					url: '/pages/goods-detail/goods-detail?id='+id,
+					success: res => {},
+					fail: () => {},
+					complete: () => {}
+				});
 			}
 		},
 		components: {
