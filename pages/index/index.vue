@@ -1,7 +1,7 @@
 <template>
 	<view class="home">
 		<swiper indicator-dots autoplay circular >
-			<swiper-item v-for="item in swipers" :key="item.id" @click="swiperClik(item.url)">
+			<swiper-item v-for="(item,index) in swipers" :key="item.id" @click="swiperClik(item.url)">
 				<image :src="item.img"></image>
 			</swiper-item>
 
@@ -104,6 +104,7 @@
 					complete: () => {}
 				});
 			},
+			//导航点击额处理函数
 			swiperClik(url){
 				console.log(url);
 				uni.navigateTo({
@@ -113,6 +114,7 @@
 					complete: () => {}
 				});
 			},
+			//导航到商品的详情页
 			goGoodsDetail(id){
 				uni.navigateTo({
 					url: '/pages/goods-detail/goods-detail?id='+id,
